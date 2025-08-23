@@ -10,13 +10,16 @@ cd TripInMe
 # server.port=8080
 ./gradlew bootRun     
 # Windows는 
+
 .\gradlew bootRun
 
 # 3) 프론트엔드
 cd src/main/frontend
+
 npm ci
-npm run dev           
-# http://localhost:5173
+
+npm run dev
+           
 
 # (Vite proxy: /api -> http://localhost:8080 설정 필수 --> 프록시 설정 따로 해두었으니 신경안쓰셔도 됩니다. )
 
