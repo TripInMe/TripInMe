@@ -1,5 +1,7 @@
 # 1) 클론
+
 git clone https://github.com/TripInMe/TripInMe.git
+
 cd TripInMe
 
 # 2) 백엔드 (DB 없이 우선 실행)
