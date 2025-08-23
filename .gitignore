@@ -35,3 +35,18 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### --- Frontend (src/main/frontend) --- ###
+src/main/frontend/node_modules/
+src/main/frontend/dist/
+src/main/frontend/.vite/
+src/main/frontend/.eslintcache
+src/main/frontend/npm-debug.log*
+src/main/frontend/yarn-debug.log*
+src/main/frontend/yarn-error.log*
+
+### --- Secrets --- ###
+**/.env
+**/.env.*
+**/application-local.properties
+**/application-prod.properties
