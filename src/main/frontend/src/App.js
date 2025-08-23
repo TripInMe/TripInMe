@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
 
-function App() {
+export default function App() {
+  const [api, setApi] = useState("loading...");
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    fetch("/api/ping")
+      .then(r => r.text())
+      .then(setApi)
+      .catch(() => setApi("ERROR"));
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{fontFamily:"sans-serif", padding:20}}>
+      <h1>React OK (CRA)</h1>
+      <p>API: <b>{api}</b></p>
+      <button onClick={() => setCount(c => c + 1)}>+1</button>
+      <span style={{marginLeft:8}}>count: {count}</span>
     </div>
   );
 }
-
-export default App;
